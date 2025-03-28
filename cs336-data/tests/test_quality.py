@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 def test_classify_quality():
     low_quality_cc_path = FIXTURES_PATH / "low_quality_cc.txt"
-    with open(low_quality_cc_path) as f:
+    with open(low_quality_cc_path, encoding="utf-8") as f:
         low_quality_cc = f.read()
     prediction, score = run_classify_quality(low_quality_cc)
     # TODO: you may have to change this check below, depending on what your
@@ -19,7 +19,7 @@ def test_classify_quality():
     assert score > 0
 
     high_quality_wiki_path = FIXTURES_PATH / "high_quality_wiki_reference.txt"
-    with open(high_quality_wiki_path) as f:
+    with open(high_quality_wiki_path, encoding="utf-8") as f:
         high_quality_wiki = f.read()
     prediction, score = run_classify_quality(high_quality_wiki)
     # TODO: you may have to change this check below, depending on what your
