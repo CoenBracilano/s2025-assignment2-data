@@ -5,7 +5,6 @@ from pathlib import Path
 import random
 import re
 import shutil
-from typing import List
 import unicodedata
 
 # Function to hash the line to a fixed-size key
@@ -207,7 +206,3 @@ def minhash_dedup(input_files: list[os.PathLike], num_hashes: int,
 
 
 
-
-
-if __name__ == "__main__":
- x=0

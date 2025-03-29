@@ -167,3 +167,4 @@ cython_debug/
 
 # All of the data and files used for training 
 docs/
+required_docs/
